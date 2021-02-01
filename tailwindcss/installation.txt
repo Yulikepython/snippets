@@ -1,6 +1,18 @@
-npm install tailwindcss
+$ npm init -y
+$ sudo apt install npm
 
 < cssfolder/style.css>
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$ npm install tailwindcss
+current directory にフォルダがいくつか作られる
+$ mkdir src
+$ touch src/styles.css
+<in the package.json>
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/style.css"
+  },
+< run command>
+$ npx tailwindcss-cli@latest build -o public/style.css
